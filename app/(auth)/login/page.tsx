@@ -44,7 +44,7 @@ export default function Home() {
         </form>
 
         <p className="registro">
-          ¿No tienes cuenta? <a href="login/page.tsx">Regístrate</a> como maestro o cuidador
+          ¿No tienes cuenta? <a href="registro/page.tsx">Regístrate</a> como maestro o cuidador
         </p>
       </div>
     </div>
