@@ -1,26 +1,119 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap');
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+//Colores
+$color-primary: #C77E01;
+$color-secondary: #9C5CE1;
+$color-dark: #222222;
+$color-light: #777777;
+$bg-input: #f4f4f4;
+
+//Espaciados y tamaños
+$border-radius: 12px;
+$gap: 1rem;
+$input-padding: 1rem;
+$btn-padding: 1.2rem;
+$font-size-base: 1rem;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.sedan-sc-regular {
+  font-family: "Sedan SC", serif;
+  font-weight: 550;
+  font-style: normal;
+}
+
+.login-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.login-image {
+  position: relative;
+  width: 55%;
+}
+
+.image-cover {
+  object-fit: fill;
+}
+
+.login-form {
+  width: 38%;
+  padding-left: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.titulo {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: $color-primary;
+}
+
+.descripcion {
+  max-width: 420px;
+  margin-bottom: 2rem;
+  color: $color-light;
+  font-size: $font-size-base;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+
+  .boton {
+    align-self: center;  
+    width: 65%;
+  }
+
+}
+
+.label {
+  color: $color-secondary;
+  font-size: $font-size-base;
+}
+
+.input {
+  padding: $input-padding;
+  border-radius: $border-radius;
+  background: $bg-input;
+  border: none;
+  font-size: $font-size-base;
+}
+
+.boton {
+  margin-top: 1rem;
+  padding: $btn-padding;
+  border: none;
+  border-radius: $border-radius;
+  background: $color-secondary;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: $font-size-base;
+  &:hover {
+    opacity: 0.9;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.registro {
+  margin-top: 1.5rem;
+  font-size: $font-size-base;
+  color: $color-light;
+  align-self: center;
+  a {
+    color: $color-light;
+  }
+
 }
