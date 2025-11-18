@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="login-container">
+    <div className="container">
       {/* Izquierda || Imagen */}
-      <div className="login-image">
+      <div className="image">
         <Image
           src="/login.png"
           alt="Criatura mágica"
@@ -15,7 +15,7 @@ export default function Home() {
       </div>
 
       {/* Derecha || Formulario */}
-      <div className="login-form">
+      <div className="form">
         <h1 className="titulo sedan-sc-regular">Inicia sesión</h1>
 
         <p className="descripcion">

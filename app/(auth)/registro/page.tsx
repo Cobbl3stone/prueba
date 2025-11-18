@@ -2,11 +2,11 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="login-container">
+    <div className="container">
       {/* Izquierda || Imagen */}
-      <div className="login-image">
+      <div className="image">
         <Image
-          src="/register.png"
+          src="/reg.png"
           alt="Criatura mágica"
           fill
           priority
@@ -15,21 +15,35 @@ export default function Home() {
       </div>
 
       {/* Derecha || Formulario */}
-      <div className="login-form">
-        <h1 className="titulo sedan-sc-regular">Inicia sesión</h1>
+      <div className="form">
+        <h1 className="titulo sedan-sc-regular">Únete al santuario</h1>
 
         <p className="descripcion">
-          Para acceder a la colección de criaturas mágicas. Sólo los maestros y
-          los cuidadores reconocidos pueden entrar
+          Elige si serás un cuidador o maestro de criaturas.
+          Completa los detalles para empezar
         </p>
 
         <form className="formulario">
+
+          <label className="label sedan-sc-regular">Nombre mágico</label>
+          <input
+            type="text"
+            placeholder="Introduce tu nombre mágico"
+            className="input"
+          />
+
           <label className="label sedan-sc-regular">Correo mágico</label>
           <input
             type="email"
             placeholder="tunombre@santuario.com"
             className="input"
           />
+          
+          <label className="label sedan-sc-regular">Rol</label>
+          <select className="input rol">
+            <option value="maestro">Maestro</option>
+            <option value="cuidador">Cuidador</option>
+          </select>
 
           <label className="label sedan-sc-regular">Palabra mágica</label>
           <input
@@ -39,12 +53,12 @@ export default function Home() {
           />
 
           <button type="submit" className="boton sedan-sc-regular">
-            Acceder al santuario
+            Registrarme en el santuario
           </button>
         </form>
 
         <p className="registro">
-          ¿No tienes cuenta? <a href="login/page.tsx">Regístrate</a> como maestro o cuidador
+          ¿Tienes cuenta? <a href="login/page.tsx">Inicia sesión</a> en el refugio
         </p>
       </div>
     </div>
