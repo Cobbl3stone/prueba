@@ -31,7 +31,7 @@ export default function Home() {
     }
 
     // Registro correcto → enviar a login
-    router.push("/auth/login");
+    router.push("login/");
   };
 
   return (
