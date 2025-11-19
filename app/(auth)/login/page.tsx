@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="container">
       {/* Izquierda || Imagen */}
-      <div className="image">
+      <div className="image login-image">
         <Image
           src="/login.png"
           alt="Criatura mágica"
@@ -41,11 +41,10 @@ export default function Home() {
           <button type="submit" className="boton sedan-sc-regular">
             Acceder al santuario
           </button>
+          <p className="registro">
+          ¿No tienes cuenta? <a href="registro/">Regístrate</a> como maestro o cuidador
+          </p>
         </form>
-
-        <p className="registro">
-          ¿No tienes cuenta? <a href="registro/page.tsx">Regístrate</a> como maestro o cuidador
-        </p>
       </div>
     </div>
   );
