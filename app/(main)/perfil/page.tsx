@@ -19,10 +19,10 @@ export default function Home() {
         <div className="menu">
           <h1 className="titulo sedan-sc-regular">El santuario</h1>
           <div className="menu-options">
-            <button type="submit" className="boton sedan-sc-regular">
+            <a href="criaturas/" className="boton sedan-sc-regular">
               Mis criaturas
-            </button>
-            <button type="submit" className="boton sedan-sc-regular">
+            </a>
+            <button className="boton mark sedan-sc-regular">
               Mi perfil
             </button>
             <button type="submit" className="boton sedan-sc-regular">
@@ -36,7 +36,7 @@ export default function Home() {
           Este es el lugar donde podrás gesitionar, actualizar y personalizar la información de tu perfil.
         </p>
 
-        <form className="formulario">
+        <form className="formulario perfl">
           <label className="label sedan-sc-regular">Nombre mágico</label>
           <input
             type="text"
