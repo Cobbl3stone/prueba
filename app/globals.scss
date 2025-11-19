@@ -121,29 +121,12 @@ html, body {
   gap: $gap;
   width: 90%;
   max-width: 100%;
-  
-  &.boton {
-    padding: $btn-padding;
-    border: none;
-    border-radius: $border-radius;
-    background: $color-secondary;
-    color: white;
-    cursor: pointer;
-    transition: 0.2s;
-    font-size: $font-size-base;
-    align-self: center;  
-    width: auto;
-    &:hover {
-      opacity: 0.9;
-    }
-  }
 
   &.perfl {
     width: 66%;
   }
 
 }
-
 
 .label {
   color: $color-secondary;
@@ -164,6 +147,23 @@ p, .input {
   font-size: $font-size-base;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+.boton {
+      
+    padding: $btn-padding;
+    border: none;
+    border-radius: $border-radius;
+    background: $color-secondary;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: $font-size-base;
+    align-self: center;  
+    width: auto;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
 
 .rol {
   appearance: none;
