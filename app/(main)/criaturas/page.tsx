@@ -6,7 +6,7 @@ export default async function Home() {
 
   return (
     <div className="container">
-       {/* Izquierda || Imagen */}
+      {/* Izquierda || Imagen */}
       <div className="image profile-image">
         <Image
           src={user.rol === "Cuidador" ? "/caretaker.png" : "/master.png"}

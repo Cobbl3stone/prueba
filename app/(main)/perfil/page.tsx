@@ -59,11 +59,12 @@ export default async function Home() {
           />
 
           <label className="label sedan-sc-regular">Rol</label>
-          <select className="input rol" disabled defaultValue="">
-            <option value="" selected hidden>{user.rol}</option>
-            <option value="maestro">Maestro</option>
-            <option value="cuidador">Cuidador</option>
-          </select>
+          <input
+            type="text"
+            value={user.rol}            
+            className="input"
+            disabled
+          />
 
           <label className="label sedan-sc-regular">Descripción</label>
           <p className="input desc" >{user.descripcion || "Sin descripción."}</p>
