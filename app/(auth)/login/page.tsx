@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { signIn } from "next-auth/react"
 import { useRouter } from "next/navigation";
 
 export default function Home() {
@@ -14,17 +15,15 @@ export default function Home() {
     e.preventDefault();
     setError("");
 
-    const res = await fetch("/api/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, pass }),
-    });
+    const res = await signIn("credentials", {
+      redirect: false,
+      email,
+      password: pass,
+    })
 
-    const data = await res.json();
-
-    if (!res.ok) {
-      setError(data.error);
-      return;
+    if (res?.error) {
+      setError("Credenciales incorrectas")
+      return
     }
 
     // Redirige tras login correcto

@@ -1,11 +1,19 @@
 import mysql from "mysql2/promise";
 
 const pool = mysql.createPool({
-  host: "localhost",
-  user: "root",
-  password: "rootpass",
-  database: "users",
-  port: 3306,
+  host: process.env.DB_HOST || "localhost",
+  user: process.env.DB_USER || "root",
+  password: process.env.DB_PASSWORD || "rootpass",
+  database: process.env.DB_NAME || "users",
+  port: Number(process.env.DB_PORT || 3306),
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
 });
+
+export async function query(sql: string, params?: any[]) {
+  const [rows] = await pool.execute(sql, params);
+  return rows as any;
+}
 
 export default pool;
