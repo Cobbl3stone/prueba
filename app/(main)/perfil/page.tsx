@@ -6,25 +6,15 @@ export default async function Home() {
 
   return (
     <div className="container">
-      {/* Izquierda || Imagen */}
+       {/* Izquierda || Imagen */}
       <div className="image profile-image">
-        if ({user.rol} == "Cuidador") {
-          <Image
-          src="/caretaker.png"
-          alt="Cuidador"
-          fill
-          priority
-          className="image-cover"
-          />
-        } else {
-          <Image
-          src="/master.png"
-          alt="Maestro"
+        <Image
+          src={user.rol === "Cuidador" ? "/caretaker.png" : "/master.png"}
+          alt={user.rol}
           fill
           priority
           className="image-cover"
         />
-        }
       </div>
 
       {/* Derecha || Formulario */}
@@ -38,9 +28,11 @@ export default async function Home() {
             <button className="boton mark sedan-sc-regular">
               Mi perfil
             </button>
-            <button type="submit" className="boton sedan-sc-regular">
-              Cerrar sesión
-            </button>
+            <form action="/api/logout" method="post" style={{ display: "inline" }}>
+              <button type="submit" className="boton sedan-sc-regular">
+                Cerrar sesión
+              </button>
+            </form>
           </div>
         </div>
         <h2 className="titulo sub sedan-sc-regular">Mi perfil</h2>

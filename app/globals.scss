@@ -79,7 +79,6 @@ html, body {
 
 .descripcion {
   margin-top: 1.25rem;
-  max-width: 420px;
   margin-bottom: 1.5rem;
   color: $color-light;
   font-size: $font-size-base;
@@ -146,6 +145,7 @@ html, body {
 p, .input {
   font-size: $font-size-base;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
 }
 
 .boton {
