@@ -12,8 +12,8 @@ $border-radius: 12px;
 $gap: 0.75rem;
 $input-padding: 1rem;
 $btn-padding: 1rem;
-$font-size-base: .9rem;
-$font-size-label: .85rem;
+$font-size-base: 1rem;
+$font-size-label: 1rem;
 
 * {
   margin: 0;
@@ -68,7 +68,7 @@ html, body {
 }
 
 .titulo {
-  font-size: 1.75rem;
+  font-size: 2rem;
   color: $color-primary;
 
   &.sub {
@@ -149,21 +149,21 @@ p, .input {
 }
 
 .boton {
-      
-    padding: $btn-padding;
-    border: none;
-    border-radius: $border-radius;
-    background: $color-secondary;
-    color: white;
-    cursor: pointer;
-    transition: 0.2s;
-    font-size: $font-size-base;
-    align-self: center;  
-    width: auto;
-    &:hover {
-      opacity: 0.9;
-    }
+  padding: $btn-padding;
+  border-radius: $border-radius;
+  background: $color-secondary;
+  margin-top: 1rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: $font-size-base;
+  align-self: center;  
+  width: auto;
+  &:hover {
+    opacity: 0.9;
   }
+}
 
 .rol {
   appearance: none;

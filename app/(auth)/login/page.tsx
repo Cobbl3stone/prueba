@@ -79,7 +79,7 @@ export default function Home() {
           </button>
 
           <p className="registro">
-            ¿No tienes cuenta? <a href="registro/">Regístrate</a>
+            ¿No tienes cuenta? <a href="registro/">Regístrate</a> como maestro o cuidador.
           </p>
         </form>
       </div>

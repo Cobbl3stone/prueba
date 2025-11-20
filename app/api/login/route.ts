@@ -37,13 +37,24 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: error.message }, { status: error.status });
     }
 
-    // Login exitoso
+    // Login exitoso -> crear cookie de sesión (id de usuario)
     const user = rows[0];
-    return NextResponse.json({
+    const res = NextResponse.json({
       message: "Login correcto",
       user: { id: user.id, name: user.name, email: user.email }
     });
+
+    // Cookie HTTP-only con duración 7 días
+    res.cookies.set({
+      name: "session",
+      value: String(user.id),
+      httpOnly: true,
+      path: "/",
+      maxAge: 60 * 60 * 24 * 7,
+    });
     
+    return res;
+
   } catch (err) {
     console.error(err);
     const error = ERRORS.INTERNAL_ERROR;

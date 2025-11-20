@@ -1,6 +1,9 @@
 import Image from "next/image";
+import { requireUser } from "@/app/api/auth/route";
 
-export default function Home() {
+export default async function Home() {
+  const user = await requireUser();
+
   return (
     <div className="container">
       {/* Izquierda || Imagen */}
