@@ -1,17 +1,30 @@
 import Image from "next/image";
+import { requireUser } from "@/app/api/auth/route";
 
-export default function Home() {
+export default async function Home() {
+  const user = await requireUser();
+
   return (
     <div className="container">
       {/* Izquierda || Imagen */}
       <div className="image profile-image">
-        <Image
+        if ({user.rol} == "Cuidador") {
+          <Image
           src="/caretaker.png"
           alt="Cuidador"
           fill
           priority
           className="image-cover"
+          />
+        } else {
+          <Image
+          src="/master.png"
+          alt="Maestro"
+          fill
+          priority
+          className="image-cover"
         />
+        }
       </div>
 
       {/* Derecha || Formulario */}
