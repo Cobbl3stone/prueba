@@ -3,8 +3,11 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import {useTranslations} from 'next-intl';
 
 export default function Home() {
+  const t = useTranslations('Register');
+
   const router = useRouter();
 
   const [name, setName] = useState("");
@@ -47,47 +50,46 @@ export default function Home() {
       </div>
 
       <div className="form">
-        <h1 className="titulo sedan-sc-regular">Únete al santuario</h1>
+        <h1 className="titulo sedan-sc-regular">{t('register_title')}</h1>
 
         <p className="descripcion">
-          Elige si serás un cuidador o maestro de criaturas.
-          Completa los detalles para empezar
+         {t('register_description')}
         </p>
 
         <form className="formulario" onSubmit={handleSubmit}>
 
-          <label className="label sedan-sc-regular">Nombre mágico</label>
+          <label className="label sedan-sc-regular">{t('name_label')}</label>
           <input
             type="text"
-            placeholder="Introduce tu nombre mágico"
+            placeholder={t('name_placeholder')}
             className="input"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
 
-          <label className="label sedan-sc-regular">Correo mágico</label>
+          <label className="label sedan-sc-regular">{t('email_label')}</label>
           <input
             type="email"
-            placeholder="tunombre@santuario.com"
+            placeholder={t('email_placeholder')}
             className="input"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
 
-          <label className="label sedan-sc-regular">Rol</label>
+          <label className="label sedan-sc-regular">{t('role_label')}</label>
           <select
             className="input rol"
             value={rol}
             onChange={(e) => setRol(e.target.value)}
           >
-            <option value="maestro">Maestro</option>
-            <option value="cuidador">Cuidador</option>
+            <option value="maestro">{t('maestro')}</option>
+            <option value="cuidador">{t('cuidador')}</option>
           </select>
 
-          <label className="label sedan-sc-regular">Palabra mágica</label>
+          <label className="label sedan-sc-regular">{t('password_label')}</label>
           <input
             type="password"
-            placeholder="Introduce tu contraseña"
+            placeholder={t('password_placeholder')}
             className="input"
             value={pass}
             onChange={(e) => setPass(e.target.value)}
@@ -96,11 +98,11 @@ export default function Home() {
           {error && <p style={{ color: "red" }}>{error}</p>}
 
           <button type="submit" className="boton sedan-sc-regular">
-            Registrarme en el santuario
+            {t('register_button')}
           </button>
 
           <p className="registro">
-            ¿Tienes cuenta? <a href="login/">Inicia sesión</a> en el refugio
+            {t('login_question')} <a href="login/">{t('login_link')}</a> {t('login_close')}
           </p>
         </form>
       </div>

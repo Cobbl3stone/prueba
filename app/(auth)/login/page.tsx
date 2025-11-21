@@ -4,8 +4,11 @@ import Image from "next/image";
 import { useState } from "react";
 import { signIn } from "next-auth/react"
 import { useRouter } from "next/navigation";
+import {useTranslations} from 'next-intl';
 
 export default function Home() {
+  const t = useTranslations('Login');
+
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [pass, setPassword] = useState("");
@@ -22,7 +25,7 @@ export default function Home() {
     })
 
     if (res?.error) {
-      setError("Credenciales incorrectas")
+      setError("Login error")
       return
     }
 
@@ -45,27 +48,26 @@ export default function Home() {
 
       {/* Derecha || Formulario */}
       <div className="form">
-        <h1 className="titulo sedan-sc-regular">Inicia sesión</h1>
+        <h1 className="titulo sedan-sc-regular">{t('login_title')}</h1>
 
         <p className="descripcion">
-          Para acceder a la colección de criaturas mágicas. Sólo los maestros y
-          los cuidadores reconocidos pueden entrar
+         {t('login_description')}
         </p>
 
         <form className="formulario" onSubmit={handleSubmit}>
-          <label className="label sedan-sc-regular">Correo mágico</label>
+          <label className="label sedan-sc-regular">{t('email_label')}</label>
           <input
             type="email"
-            placeholder="tunombre@santuario.com"
+            placeholder={t('email_placeholder')}
             className="input"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
 
-          <label className="label sedan-sc-regular">Palabra mágica</label>
+          <label className="label sedan-sc-regular">{t('password_label')}</label>
           <input
             type="password"
-            placeholder="Introduce tu contraseña"
+            placeholder={t('password_placeholder')}
             className="input"
             value={pass}
             onChange={(e) => setPassword(e.target.value)}
@@ -74,11 +76,11 @@ export default function Home() {
           {error && <p style={{ color: "red" }}>{error}</p>}
 
           <button type="submit" className="boton sedan-sc-regular">
-            Acceder al santuario
+           {t('login_button')}
           </button>
 
           <p className="registro">
-            ¿No tienes cuenta? <a href="registro/">Regístrate</a> como maestro o cuidador.
+            {t('register_question')} <a href="registro/">{t('register_link')}</a> {t('login_close')}
           </p>
         </form>
       </div>

@@ -1,0 +1,55 @@
+{
+"Register": {
+    "register_title": "Join the sanctuary",
+    "register_description": "Choose whether you will be a caretaker or master of creatures. Complete the details to begin",
+    "name_label": "Magic name",
+    "name_placeholder": "Enter your magic name",
+    "email_label": "Magic email",
+    "email_placeholder": "yourname@sanctuary.com",
+    "role_label": "Role",
+    "maestro": "Master",
+    "cuidador": "Caretaker",
+    "password_label": "Magic password",
+    "password_placeholder": "Enter your password",
+    "register_button": "Register in the sanctuary",
+    "login_question": "Already have an account?",
+    "login_link": "Log in",
+    "login_title": "Log in",
+    "login_close": "at the sanctuary",
+    "login_description": "To access the collection of magical creatures. Only recognized masters and caretakers may enter",
+    "login_button": "Enter the sanctuary",
+    "register_question": "Don't have an account?",
+    "register_link": "Register"
+    },
+"Login": {
+   "wrong_credentials": "Incorrect credentials",
+
+  "login_title": "Log in",
+  "login_description": "To access the collection of magical creatures. Only recognized masters and caretakers may enter",
+  "login_button": "Enter the sanctuary",
+  "register_question": "Don't have an account?",
+  "register_link": "Register",
+
+  "email_label": "Magic email",
+  "email_placeholder": "yourname@sanctuary.com",
+  "password_label": "Magic password",
+  "password_placeholder": "Enter your password",
+  "login_close": "as a master or caretaker"
+},
+  "Profile": {
+    "profile_title": "My profile",
+    "profile_description": "This is the place where you can manage, update, and customize your profile information.",
+    "name_label": "Magic Name",
+    "email_label": "Magic Email",
+    "role_label": "Role",
+    "description_label": "Description",
+    "no_description": "No description.",
+    "menu_title": "The Sanctuary",
+    "menu_my_creatures": "My Creatures",
+    "menu_my_profile": "My Profile",
+    "menu_logout": "Sign Out",
+    "role_master": "Master",
+    "role_caretaker": "Caretaker"
+  }
+
+}

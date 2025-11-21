@@ -1,16 +1,32 @@
 import Image from "next/image";
-import { requireUser } from "@/app/api/auth/route";
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import {getTranslations} from 'next-intl/server';
 
 export default async function Home() {
-  const user = await requireUser();
+  const session = await getServerSession(authOptions);
+
+  const t = await getTranslations('Profile');
+
+  if (!session || !session.user) {
+    redirect("login/");
+  }
+
+  // ahora session.user existe (guard)
+  const user = session.user as {
+    name?: string;
+    email?: string;
+    rol?: string;
+    descripcion?: string;
+  };
 
   return (
     <div className="container">
-      {/* Izquierda || Imagen */}
       <div className="image profile-image">
         <Image
-          src={user.rol === "Cuidador" ? "/caretaker.png" : "/master.png"}
-          alt={user.rol}
+          src={user.rol === "cuidador" ? "/caretaker.png" : "/master.png"}
+          alt={user.rol ? t("role_caretaker") : t("role_master")}
           fill
           priority
           className="image-cover"

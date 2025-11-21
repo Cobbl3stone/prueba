@@ -1,0 +1,54 @@
+{
+"Register": {
+  "register_title": "Únete al santuario",
+  "register_description": "Elige si serás un cuidador o maestro de criaturas. Completa los detalles para empezar",
+  "name_label": "Nombre mágico",
+  "name_placeholder": "Introduce tu nombre mágico",
+  "email_label": "Correo mágico",
+  "email_placeholder": "tunombre@santuario.com",
+  "role_label": "Rol",
+  "maestro": "Maestro",
+  "cuidador": "Cuidador",
+  "password_label": "Palabra mágica",
+  "password_placeholder": "Introduce tu contraseña",
+  "register_button": "Registrarme en el santuario",
+  "login_question": "¿Tienes cuenta?",
+  "login_link": "Inicia sesión",
+  "login_title": "Inicia sesión",
+  "login_close": "en el refugio",
+  "login_description": "Para acceder a la colección de criaturas mágicas. Sólo los maestros y los cuidadores reconocidos pueden entrar",
+  "login_button": "Acceder al santuario",
+  "register_question": "¿No tienes cuenta?",
+  "register_link": "Regístrate"
+},
+"Login": {
+  "wrong_credentials": "Credenciales incorrectas",
+
+  "login_title": "Inicia sesión",
+  "login_description": "Para acceder a la colección de criaturas mágicas. Sólo los maestros y los cuidadores reconocidos pueden entrar",
+  "login_button": "Acceder al santuario",
+  "register_question": "¿No tienes cuenta?",
+  "register_link": "Regístrate",
+
+  "email_label": "Correo mágico",
+  "email_placeholder": "tunombre@santuario.com",
+  "password_label": "Palabra mágica",
+  "password_placeholder": "Introduce tu contraseña",
+  "login_close": "como maestro o cuidador"
+},
+  "Profile": {
+    "profile_title": "Mi perfil",
+    "profile_description": "Este es el lugar donde podrás gestionar, actualizar y personalizar la información de tu perfil.",
+    "name_label": "Nombre mágico",
+    "email_label": "Correo mágico",
+    "role_label": "Rol",
+    "description_label": "Descripción",
+    "no_description": "Sin descripción.",
+    "menu_title": "El santuario",
+    "menu_my_creatures": "Mis criaturas",
+    "menu_my_profile": "Mi perfil",
+    "menu_logout": "Cerrar sesión",
+    "role_master": "Maestro",
+    "role_caretaker": "Cuidador"
+  }
+}
